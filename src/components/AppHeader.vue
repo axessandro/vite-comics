@@ -59,12 +59,7 @@ export default{
     },
     methods: {
         toggleActive(index){
-        
-            if (this.links[index].active === false) {
-                this.links[index].active === true
-            }else{
-                this.links[index].active === false
-            }  
+            this.links[index].active = !this.links[index].active;
         },
     }
 }
@@ -77,7 +72,7 @@ export default{
         <div class="logo"><img src="../assets/img/dc-logo.png" alt="DC Comics logo"></div>
         <nav>
             <ul class="links">
-                <li v-for="(link, index) in links" :key="index" class="link" @click.prevent="toggleActive(index)">
+                <li v-for="(link, index) in links" :key="index" class="link" @click.prevent="toggleActive(index)" :class=" active === true ? 'active' : ''">
                     <a :href="link.href">{{link.title.toUpperCase()}}</a>
                 </li>
             </ul>
