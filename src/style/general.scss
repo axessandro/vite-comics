@@ -1,6 +1,12 @@
 $prymary-color: #3880F1;
 $main-black: #1C1C1C;
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 a{
     text-decoration: none;
     color: $main-black;

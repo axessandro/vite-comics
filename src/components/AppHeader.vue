@@ -84,16 +84,21 @@ export default{
 // /links
 header{
     background-color: aqua;
+    width: 100%;
+    padding: 1rem 0;
+    color: $main-black;
     .container{
         display: flex;
         justify-content: space-between;
     
         .logo{
-            width: 200px;
+            min-width: 150px;
         }
 
         ul{
             display: flex;
+            align-items: center;
+            height: 100%;
 
             li{
                 padding: 0 0.8rem;
