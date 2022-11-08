@@ -56,6 +56,16 @@ export default{
             }
             ]
         }
+    },
+    methods: {
+        toggleActive(index){
+        
+            if (this.links[index].active === false) {
+                this.links[index].active === true
+            }else{
+                this.links[index].active === false
+            }  
+        },
     }
 }
 </script>
@@ -67,7 +77,7 @@ export default{
         <div class="logo"><img src="../assets/img/dc-logo.png" alt="DC Comics logo"></div>
         <nav>
             <ul class="links">
-                <li v-for="(link, index) in links" :key="index" class="link">
+                <li v-for="(link, index) in links" :key="index" class="link" @click.prevent="toggleActive(index)">
                     <a :href="link.href">{{link.title.toUpperCase()}}</a>
                 </li>
             </ul>
@@ -83,10 +93,11 @@ export default{
 @use "../style/partials/variables" as *;
 // /links
 header{
-    background-color: aqua;
     width: 100%;
     padding: 1rem 0;
-    color: $main-black;
+    color: $primary-color;
+    font-size: 1rem;
+    font-weight: 500;
     .container{
         display: flex;
         justify-content: space-between;
@@ -102,6 +113,13 @@ header{
 
             li{
                 padding: 0 0.8rem;
+                height: 100%;
+                display: flex;
+                align-items: center;
+            }
+            .active{
+                color: $primary-color;
+                border-bottom: 2px solid black;
             }
         }
     
