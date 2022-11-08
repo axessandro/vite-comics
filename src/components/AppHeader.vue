@@ -62,10 +62,9 @@ export default{
             for ( let i = 0; i < this.links.length; i++){
                 const link = this.links[i];
                 link.active = false;
-                console.log(link.active);
             }
             this.links[index].active = true;
-            console.log(this.links[index].active);
+            
         },
     }
 }
@@ -78,8 +77,8 @@ export default{
         <div class="logo"><img src="../assets/img/dc-logo.png" alt="DC Comics logo"></div>
         <nav>
             <ul class="links">
-                <li v-for="(link, index) in links" :key="index" class="link" @click.prevent="toggleActive(index)">
-                    <a :class=" active === true ? 'active' : ''" :href="link.href">{{link.title.toUpperCase()}}</a>
+                <li v-for="(link, index) in links" :key="index" class="link" :class=" link.active === true ? 'active' : ''" @click.prevent="toggleActive(index)">
+                    <a :href="link.href">{{link.title.toUpperCase()}}</a>
                 </li>
             </ul>
         </nav>
@@ -95,16 +94,16 @@ export default{
 // /links
 header{
     width: 100%;
-    padding: 1rem 0;
     color: $primary-color;
     font-size: 1rem;
     font-weight: 500;
     .container{
         display: flex;
         justify-content: space-between;
-    
+        
         .logo{
-            min-width: 150px;
+            padding: 1rem 0;
+            min-width: 100px;
         }
 
         ul{
@@ -117,17 +116,19 @@ header{
                 height: 100%;
                 display: flex;
                 align-items: center;
-                .active{
-                    color: $primary-color;
-                    border-bottom: 2px solid black;
-                }
+                border-bottom: 8px solid #ffffff00;
+                border-top: 8px solid #ffffff00;
+                font-size: .8rem;
             }
             
+            li.active{
+                border-bottom: 8px solid $primary-color;
+                a{
+                    color: $primary-color;
+                }
+            }
         }
-    
+        
     }
-
 }
-
-
 </style>

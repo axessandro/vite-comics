@@ -2,6 +2,7 @@
 import AppHeaderVue from './components/AppHeader.vue';
 import AppMainVue from './components/AppMain.vue';
 import AppFooterVue from './components/AppFooter.vue';
+import AppJumboVue from './components/AppJumbo.vue';
 
 export default{
   data(){
@@ -12,6 +13,7 @@ export default{
   components:{
     AppHeaderVue,
     AppMainVue,
+    AppJumboVue,
     AppFooterVue
   },
 }
@@ -20,6 +22,7 @@ export default{
 <template>
   <AppHeaderVue />
   <AppMainVue />
+  <AppJumboVue/>
   <AppFooterVue />
 </template>
 
