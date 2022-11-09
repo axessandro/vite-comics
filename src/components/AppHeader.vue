@@ -102,8 +102,8 @@ header{
         justify-content: space-between;
         
         .logo{
-            padding: 1rem 0;
-            min-width: 100px;
+            padding: 0.5rem 0;
+            width: 80px;
         }
 
         ul{
