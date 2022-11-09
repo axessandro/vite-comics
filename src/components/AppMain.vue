@@ -139,6 +139,11 @@ main{
     font-weight: 600;
     margin: 2rem 50% 0;
     transform: translate(-50%);
+    border: 2px solid $primary-color;
+    &:hover{
+      background-color: $main-black;
+      transition: all .5s;
+    }
   }
 }
 

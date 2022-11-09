@@ -197,7 +197,7 @@ footer{
     .top-footer{
         background-image: url(../assets/img/footer-bg.jpg);
         color: white;
-        
+        overflow: hidden;
         .container{
             display: flex;
             justify-content: space-between;
@@ -251,6 +251,10 @@ footer{
                 padding: 1rem 2rem;
                 color: white;
                 font-weight: 700;
+                &:hover{
+                    background-color: $primary-color;
+                    transition: all .5s;
+                }
             }
             .follow-us{
                 display: flex;
