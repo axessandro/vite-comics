@@ -167,14 +167,22 @@ export default{
             </div>
 
             <div class="logo">                
-                    <img src="../assets/img/dc-logo-bg.png" alt="">
+                    <img src="../assets/img/dc-logo-bg.png" alt="DC Comics logo">
             </div>
 
         </div>
     </div>
     <div class="bot-footer">
         <div class="container">
-
+            <button>SIGN-UP NOW</button>
+            <div class="follow-us">
+                <h3>FOLLOW US</h3>
+                <img src="../assets/img/footer-facebook.png" alt="Facebook logo">
+                <img src="../assets/img/footer-twitter.png" alt="Twitter logo">
+                <img src="../assets/img/footer-youtube.png" alt="Youtube logo">
+                <img src="../assets/img/footer-pinterest.png" alt="Pintarest logo">
+                <img src="../assets/img/footer-periscope.png" alt="Periscope logo">
+            </div>
         </div>
     </div>
   </footer>
@@ -229,6 +237,28 @@ footer{
             
         }
         
+    }
+
+    .bot-footer{
+        background-color: $footer-bg;
+        padding: 2rem 0;
+        .container{
+            display: flex;
+            justify-content: space-between;
+            button{
+                background-color: $footer-bg;
+                border: 2px solid $primary-color;
+                padding: 1rem 2rem;
+                color: white;
+                font-weight: 700;
+            }
+            .follow-us{
+                display: flex;
+                gap: 1rem;
+                align-items: center;
+                color: $primary-color;
+            }
+        }
     }
 }
 
