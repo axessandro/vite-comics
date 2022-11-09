@@ -12,7 +12,7 @@ export default{
             {
                 title: "comics",
                 href: "/comics",
-                active: false,
+                active: true,
             },
             {
                 title: "movies",
@@ -97,6 +97,7 @@ header{
     color: $primary-color;
     font-size: 1rem;
     font-weight: 500;
+    
     .container{
         display: flex;
         justify-content: space-between;

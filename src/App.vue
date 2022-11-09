@@ -21,6 +21,9 @@ export default{
 
 <template>
   <AppHeaderVue />
+  <div class="hero">
+    <img src="./assets/img/jumbotron.jpg" alt="">
+  </div>
   <AppMainVue />
   <AppJumboVue/>
   <AppFooterVue />
@@ -31,6 +34,17 @@ export default{
 @use "./style/general.scss" as *;
 @use "./style/partials/variables" as *;
 // /links
+.hero{
+  width: 100%;
+  height: 40vh;
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+  }
+
+}
 
 
 </style>

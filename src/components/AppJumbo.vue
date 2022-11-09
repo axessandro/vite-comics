@@ -77,7 +77,7 @@ export default{
 
                 img{
                     height: 50px;
-                    margin-right: .3rem;
+                    margin-right: .7rem;
                 }
                 a{
                     color: white;
